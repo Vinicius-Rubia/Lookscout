@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
+  background: ${({ theme }) => theme['neutral-100']};
   display: flex;
   justify-content: space-between;
   height: 86px;

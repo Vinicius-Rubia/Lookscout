@@ -57,17 +57,22 @@ export const StyledButton = styled.a<iStyledButtonProps>`
         return css`
           background: ${theme["primary-600"]};
           color: ${theme.white};
+
+          &:hover {
+            filter: brightness(1.1);
+            box-shadow: 0 4px 25px rgba(255, 249, 249, 0.25);
+          }
         `;
       case "outline":
         return css`
-          border: 1px solid ${theme["primary-600"]};
-          color: ${theme["primary-600"]};
+          border: 1px solid ${theme["neutral-700"]};
+          color: ${theme["gray-700"]};
+
+          &:hover {
+            border: 1px solid ${theme["primary-600"]};
+            color: ${theme["primary-600"]};
+          }
         `;
     }
   }}
-
-  &:hover {
-    filter: brightness(1.1);
-    box-shadow: 0 4px 25px rgba(255, 249, 249, 0.25);
-  }
 `;

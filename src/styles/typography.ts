@@ -2,10 +2,8 @@ import styled, { css } from "styled-components";
 import Title from "./components/Typography";
 
 export const StyledTitle = styled(Title)`
-  font-family: "Inter", sans-serif;
   font-weight: ${({ fontWeight }) => fontWeight};
-
-  /* color: ${({ theme }) => theme.colors.black}; */
+  color: ${({ theme }) => theme["gray-700"]};
 
   ${({ fontSize }) => {
     switch (fontSize) {
@@ -31,11 +29,6 @@ interface iStyledParagraph {
 }
 
 export const StyledParagraph = styled.p<iStyledParagraph>`
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-
-  /* color: ${({ theme }) => theme.colors.white}; */
-
   ${({ fontSize }) => {
     switch (fontSize) {
       case "lg":

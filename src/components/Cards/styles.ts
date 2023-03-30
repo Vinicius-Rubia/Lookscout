@@ -1,0 +1,34 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3.2rem;
+`;
+
+export const Content = styled.div`
+  border: 1px solid ${({ theme }) => theme["neutral-600"]};
+  padding: 2.4rem 3.2rem;
+
+  h3 {
+    margin: 2.4rem 0 0.8rem;
+  }
+
+  p {
+    color: ${({ theme }) => theme["gray-50"]};
+  }
+`;
+
+export const CardHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    background: ${({ theme}) => theme["primary-25"]};
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+`;
