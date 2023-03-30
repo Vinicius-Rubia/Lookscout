@@ -1,4 +1,5 @@
 import React from "react";
+import { StyledButton } from "../../../styles/components/button";
 import { StyledParagraph, StyledTitle } from "../../../styles/typography";
 import Cards from "../../Cards";
 import * as C from "./styles";
@@ -17,6 +18,9 @@ const ChannelsReview: React.FC = () => {
         <C.CardContainer>
           <Cards />
         </C.CardContainer>
+        <StyledButton href="#" buttonSize="md" buttonStyle="solid">
+          Reveal all channels
+        </StyledButton>
       </C.Content>
     </C.Container>
   );

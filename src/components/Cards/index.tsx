@@ -57,7 +57,7 @@ const cards = [
 
 const Cards: React.FC = () => {
   return (
-    <C.Container>
+    <>
       {cards.map((card: ICardProps) => (
         <C.Content key={card.id}>
           <C.CardHeader>
@@ -72,7 +72,7 @@ const Cards: React.FC = () => {
           <StyledParagraph fontSize="md">{card.paragraph}</StyledParagraph>
         </C.Content>
       ))}
-    </C.Container>
+    </>
   );
 };
 
