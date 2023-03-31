@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyledButton } from '../../../styles/components/button'
 import { StyledParagraph, StyledTitle } from '../../../styles/typography'
-import Banner from "../../../assets/images/banner_started.png"
+import Banner from "../../../assets/images/illustration1.png"
 import * as C from "./styles"
 
 const Started: React.FC = () => {

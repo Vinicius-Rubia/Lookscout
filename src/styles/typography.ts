@@ -29,6 +29,8 @@ interface iStyledParagraph {
 }
 
 export const StyledParagraph = styled.p<iStyledParagraph>`
+  line-height: 24px;
+  
   ${({ fontSize }) => {
     switch (fontSize) {
       case "lg":
