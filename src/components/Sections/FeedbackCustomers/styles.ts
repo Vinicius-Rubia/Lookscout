@@ -20,7 +20,7 @@ export const Content = styled.div`
 `;
 
 export const Grid = styled.div`
-  margin: 6.4rem 0;
+  margin: 6.4rem 0 17rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 13.3rem;
