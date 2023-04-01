@@ -8,7 +8,7 @@ export const Content = styled.div`
 
   h2 {
     text-align: center;
-    margin: 6.4rem auto 1.6rem;
+    margin-top: 6.4rem auto 1.6rem;
   }
 
   & > .description {
@@ -20,7 +20,7 @@ export const Content = styled.div`
 `;
 
 export const Grid = styled.div`
-  margin: 7rem 0;
+  margin: 7rem 0 12.8rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3.2rem;
@@ -43,7 +43,7 @@ export const Avatar = styled.div`
 `;
 
 export const ContentPost = styled.div`
-  padding: 0 3.2rem 2.4rem;
+  padding: 0 3.2rem 1rem;
 
   h3 {
     margin: 2rem 0 1.6rem;

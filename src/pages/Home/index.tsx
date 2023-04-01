@@ -4,6 +4,7 @@ import Started from "../../components/Sections/Started";
 import ChannelsReview from "../../components/Sections/ChannelsReview";
 import ProductFeatures from "../../components/Sections/ProductFeatures";
 import LatestBlogPosts from "../../components/Sections/LatestBlogPosts";
+import FeedbackCustomers from "../../components/Sections/FeedbackCustomers";
 import * as C from "./styles";
 
 const Home: React.FC = () => {
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
       <ChannelsReview />
       <ProductFeatures />
       <LatestBlogPosts />
+      <FeedbackCustomers />
     </C.Container>
   );
 };
