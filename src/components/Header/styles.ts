@@ -36,7 +36,6 @@ export const NavContent = styled.nav`
       font-weight: 600;
       
       a {
-        text-decoration: none;
         color: ${({ theme }) => theme["gray-700"]};
 
         &:hover {

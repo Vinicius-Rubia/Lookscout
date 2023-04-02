@@ -7,6 +7,7 @@ import LatestBlogPosts from "../../components/Sections/LatestBlogPosts";
 import FeedbackCustomers from "../../components/Sections/FeedbackCustomers";
 import * as C from "./styles";
 import CTA from "../../components/Sections/CTA";
+import Footer from "../../components/Footer";
 
 const Home: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
       <LatestBlogPosts />
       <FeedbackCustomers />
       <CTA />
+      <Footer />
     </C.Container>
   );
 };

@@ -23,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     transition: 0.2s;
+    text-decoration: none;
   }
 
   body, input, textarea, button {

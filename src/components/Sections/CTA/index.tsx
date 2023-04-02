@@ -30,6 +30,7 @@ const CTA: React.FC = () => {
               <C.Input
                 type="email"
                 placeholder="Enter your email"
+                error={!!errors.email}
                 {...register("email", {
                   required: "Email é necessário",
                   pattern: {
@@ -38,7 +39,7 @@ const CTA: React.FC = () => {
                   }
                 })}
               />
-              <C.Button type="submit">Submit</C.Button>
+              <C.Button disabled={!!errors.email} error={!!errors.email} type="submit">Submit</C.Button>
             </div>
             {errors.email && (
               <C.InputError>{errors.email.message}</C.InputError>

@@ -39,17 +39,21 @@ export const Form = styled.form`
   }
 `;
 
-export const Input = styled.input`
+interface FormProps {
+  error: boolean;
+}
+
+export const Input = styled.input<FormProps>`
   flex: 1;
   padding: 1.2rem 1.6rem;
   outline: none;
   font-size: 1.5rem;
-  box-shadow: 0 0 0 1px ${(props) => props.theme['neutral-700']};
-  border: none;
+  box-shadow: 0 0 0 1px ${({ theme }) => theme["neutral-700"]};
+  border: 1px solid ${({ theme, error }) => (error ? theme["danger-700"] : theme["neutral-700"])};
   border-radius: 10px 0 0 10px;
 
   &:focus {
-    box-shadow: 0 0 0 2px ${(props) => props.theme['primary-800']};
+    box-shadow: 0 0 0 2px ${({ theme, error }) => (error ? theme["danger-700"] : theme["primary-800"])};
 
     + button {
       height: 4.7rem;
@@ -57,11 +61,11 @@ export const Input = styled.input`
   }
 
   &::placeholder {
-    color: ${(props) => props.theme['gray-25']};
+    color: ${({ theme }) => theme["gray-25"]};
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<FormProps>`
   font-size: 1.5rem;
   height: 4.6rem;
   font-weight: 600;
@@ -69,8 +73,9 @@ export const Button = styled.button`
   padding: 0 1.8rem;
   border-radius: 0 10px 10px 0;
   transition: 0.4s;
+  cursor: ${({ error }) => (error ? "not-allowed" : "pointer")};
 
-  background: ${({ theme }) => theme["primary-600"]};
+  background: ${({ theme, error }) => error ? theme["primary-950"] : theme["primary-600"]};
   color: ${({ theme }) => theme.white};
 
   &:hover {

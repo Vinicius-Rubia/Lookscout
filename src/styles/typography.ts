@@ -20,6 +20,11 @@ export const StyledTitle = styled(Title)`
         return css`
           font-size: 22px;
         `;
+
+      case "ls":
+        return css`
+          font-size: 16px;
+        `;
     }
   }}
 `;

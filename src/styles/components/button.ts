@@ -5,29 +5,12 @@ interface iStyledButtonProps {
   buttonStyle?: "solid" | "outline";
 }
 
-// export const StyledIconLink = styled.button`
-//   display: inline-flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: 35px;
-//   min-width: 35px;
-//   height: 35px;
-//   color: ${({ theme }) => theme.colors.white};
-//   opacity: 0.5;
-//   transition: 0.4s;
-
-//   &:hover {
-//     opacity: 1;
-//   }
-// `;
-
 export const StyledButton = styled.a<iStyledButtonProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
   background: none;
-  text-decoration: none;
 
   font-size: 1.5rem;
   font-weight: 600;
