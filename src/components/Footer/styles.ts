@@ -25,6 +25,10 @@ export const SocialIcons = styled.div`
   svg {
     color: ${({ theme }) => theme.white};
   }
+
+  @media (max-width: 550px) {
+    justify-content: space-evenly;
+  }
 `;
 
 export const Grid = styled.div`
