@@ -46,7 +46,7 @@ const Header: React.FC = () => {
             </C.NavContent>
           </C.Nav>
           <C.Login>
-            <StyledButton href="#" buttonSize="md" buttonStyle="solid">
+            <StyledButton href="#" buttonSize="md">
               Sign Up
             </StyledButton>
             <StyledButton href="#" buttonSize="md" buttonStyle="solid">

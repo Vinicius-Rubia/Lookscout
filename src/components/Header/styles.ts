@@ -116,6 +116,16 @@ export const MenuMobile = styled.div`
 export const Login = styled.div`
   display: flex;
   gap: 2.4rem;
+  transition: .2s;
+
+  a:first-child {
+    border: 2px solid transparent;
+
+    &:hover {
+      border: 2px solid ${({ theme }) => theme["primary-600"]};
+    }
+  }
+  
 
   @media (max-width: 870px) {
     flex-direction: column-reverse;
