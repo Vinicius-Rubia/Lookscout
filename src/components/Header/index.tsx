@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../../assets/images/logo-dark.svg";
 import { HiOutlineMenu } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
@@ -12,6 +12,13 @@ const Header: React.FC = () => {
   const handleToogleMenu = () => {
     setMenu(!menu);
   };
+
+  useEffect(() => {
+    console.log(menu);
+    menu
+      ? (window.document.body.style.overflow = "hidden")
+      : (window.document.body.style.overflow = "auto");
+  }, [menu]);
 
   return (
     <C.Container>
