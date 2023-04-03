@@ -8,7 +8,7 @@ const Started: React.FC = () => {
   return (
     <C.Container>
       <C.Content>
-        <StyledTitle tag="h1" fontSize="lg" fontWeight={700}>Your Supercharged Design <br /> Workflow.</StyledTitle>
+        <StyledTitle tag="h1" fontSize="lg" fontWeight={700}>Your Supercharged Design Workflow.</StyledTitle>
         <StyledParagraph className="description" fontSize="lg">We've been told it is possible to revolutionize the payment industry. We have not reinvented the wheel, we decided to build upon it - successfully.</StyledParagraph>
         <C.Buttons>
           <StyledButton href="#" buttonSize="md" buttonStyle="solid">

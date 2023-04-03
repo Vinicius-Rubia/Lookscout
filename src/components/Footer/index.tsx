@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/images/logo.svg";
+import Logo from "../../assets/images/logo-light.svg";
 import { BsFillHexagonFill, BsFacebook, BsGoogle, BsApple, BsInstagram } from "react-icons/bs";
 import { StyledParagraph, StyledTitle } from "../../styles/typography";
 

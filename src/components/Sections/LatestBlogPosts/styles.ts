@@ -8,14 +8,31 @@ export const Content = styled.div`
 
   h2 {
     text-align: center;
-    margin-top: 6.4rem auto 1.6rem;
+    margin: 6.4rem auto 1.6rem;
   }
 
   & > .description {
     color: ${({ theme }) => theme["gray-50"]};
     text-align: center;
-    max-width: 65%;
+    max-width: 80rem;
     margin: 0 auto;
+  }
+
+  @media (max-width: 1300px) {
+    margin: 0 2rem;
+  }
+
+  @media (max-width: 550px) {
+    h2 {
+      font-size: 3rem;
+      margin: 3.2rem auto 1.2rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    h2 {
+      font-size: 2.9rem;
+    }
   }
 `;
 
@@ -24,9 +41,20 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3.2rem;
+
+  @media (max-width: 900px) {
+    margin: 7rem 0 8.8rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 550px) {
+    margin: 2.4rem 0 6.4rem;
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Post = styled.div`
+  position: relative;
   border-radius: 10px;
   border: 1px solid ${({ theme }) => theme["neutral-600"]};
 `;
@@ -34,6 +62,7 @@ export const Post = styled.div`
 export const ImgPost = styled.img`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  width: 100%;
 `;
 
 export const Avatar = styled.div`
@@ -43,7 +72,7 @@ export const Avatar = styled.div`
 `;
 
 export const ContentPost = styled.div`
-  padding: 0 3.2rem 1rem;
+  padding: 0 3.2rem 5rem;
 
   h3 {
     margin: 2rem 0 1.6rem;
@@ -55,7 +84,12 @@ export const ContentPost = styled.div`
 
   a {
     padding: 0;
-    margin-top: 1rem;
+    position: absolute;
+    bottom: 0;
+  }
+
+  @media (max-width: 1300px) {
+    padding: 0 2rem 5rem;
   }
 `;
 

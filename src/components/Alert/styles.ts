@@ -7,7 +7,6 @@ export const Container = styled.div`
   background: ${({ theme }) => theme['neutral-600']};
   color: ${({ theme }) => theme['success-600']};
   width: auto;
-  display: inline-flex;
   border-radius: 3px;
   border-bottom: 3px solid ${({ theme }) => theme['success-600']};
   align-items: center;

@@ -6,6 +6,11 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
+export const Content = styled.div`
+  max-width: 1215px;
+  margin: 0 auto;
+`;
+
 export const TagTitle = styled.span`
   text-transform: uppercase;
   color: ${({ theme }) => theme["primary-600"]};
@@ -21,6 +26,13 @@ export const Grid = styled.div`
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   gap: 13rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
 `;
 
 export const LeftSide = styled.div`
@@ -33,9 +45,23 @@ export const LeftSide = styled.div`
   .description {
     color: ${({ theme }) => theme["gray-50"]};
   }
+
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
 `;
 
-export const RightSide = styled.div``;
+export const RightSide = styled.div`
+  @media (max-width: 900px) {
+    margin: 0 auto;
+  }
+`;
 
 export const Items = styled.div`
   margin: 2.4rem 0 3rem;

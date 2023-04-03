@@ -11,6 +11,15 @@ export const Content = styled.div`
   p {
     color: ${({ theme }) => theme["gray-50"]};
   }
+
+  @media (max-width: 550px) {
+    padding: 1.6rem;
+    
+    h3 {
+      font-size: 2rem;
+      margin: 1.6rem 0 0.8rem;
+    }
+  }
 `;
 
 export const CardHeader = styled.div`

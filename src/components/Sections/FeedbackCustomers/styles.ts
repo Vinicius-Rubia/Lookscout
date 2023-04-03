@@ -14,8 +14,24 @@ export const Content = styled.div`
   & > .description {
     color: ${({ theme }) => theme["gray-50"]};
     text-align: center;
-    max-width: 70%;
+    max-width: 85rem;
     margin: 0 auto;
+  }
+
+  @media (max-width: 1300px) {
+    margin: 0 2rem;
+  }
+
+  @media (max-width: 550px) {
+    h2 {
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    h2 {
+      font-size: 2.7rem;
+    }
   }
 `;
 
@@ -25,10 +41,23 @@ export const Grid = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   gap: 13.3rem;
   justify-content: space-between;
+
+  @media (max-width: 800px) {
+    gap: 3.7rem;
+    margin: 6.4rem 0 8rem;
+  }
+
+  @media (max-width: 630px) {
+    grid-template-columns: 1fr;
+  }  
 `;
 
 export const Item = styled.div`
   text-align: center;
+
+  p {
+    font-weight: 500;
+  }
 
   div {
     height: 4.2rem;

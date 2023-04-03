@@ -6,6 +6,11 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
+export const Content = styled.div`
+  max-width: 1215px;
+  margin: 0 auto;
+`;
+
 export const TagTitle = styled.span`
   text-transform: uppercase;
   color: ${({ theme }) => theme.white};
@@ -21,9 +26,20 @@ export const Grid = styled.div`
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   gap: 8rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
 `;
 
-export const LeftSide = styled.div``;
+export const LeftSide = styled.div`
+  @media (max-width: 900px) {
+    margin: 0 auto;
+  }
+`;
 
 export const RightSide = styled.div`
   margin: auto 0;
@@ -36,5 +52,15 @@ export const RightSide = styled.div`
   .description {
     color: ${({ theme }) => theme["primary-200"]};
     margin-bottom: 4rem;
+  }
+
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    a {
+      width: 100%;
+    }
   }
 `;

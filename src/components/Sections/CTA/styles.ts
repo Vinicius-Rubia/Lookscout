@@ -1,7 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+
+interface FormProps {
+  error: boolean;
+}
 
 export const Container = styled.div`
-  
+  background: ${({ theme }) => theme["primary-900"]};
+  padding: 6.4rem 0;
 `;
 
 export const Content = styled.div`
@@ -10,6 +15,23 @@ export const Content = styled.div`
 
   h2 {
     margin-top: 1rem;
+    color: ${({ theme }) => theme.white};
+  }
+
+  @media (max-width: 1300px) {
+    margin: 0 2rem;
+  }
+
+  @media (max-width: 550px) {
+    h2 {
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    h2 {
+      font-size: 2.3rem;
+    }
   }
 `;
 
@@ -17,15 +39,37 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8rem;
-  margin: 0 6.4rem 17.4rem;
+  margin: 0 6.4rem;
+
+  div {
+    display: grid;
+
+    p {
+      margin-top: 2.4rem;
+      color: ${({ theme }) => theme["primary-200"]};
+    }
+  }
+
+  @media (max-width: 930px) {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+
+  @media (max-width: 800px) {
+    margin: 0;
+  }
 `;
 
 export const TagTitle = styled.span`
   text-transform: uppercase;
-  color: ${({ theme }) => theme["primary-600"]};
+  color: ${({ theme }) => theme.white};
   font-size: 1.4rem;
   font-weight: 600;
   margin-left: 6.4rem;
+
+  @media (max-width: 800px) {
+    margin-left: 0;
+  }
 `;
 
 export const Form = styled.form`
@@ -37,11 +81,18 @@ export const Form = styled.form`
     display: flex;
     align-items: center;
   }
-`;
 
-interface FormProps {
-  error: boolean;
-}
+  @media (max-width: 660px) {
+    div {
+      display: grid;
+      gap: 1.6rem;
+
+      input, button {
+        border-radius: 6px;
+      }
+    }
+  }
+`;
 
 export const Input = styled.input<FormProps>`
   flex: 1;
@@ -49,11 +100,15 @@ export const Input = styled.input<FormProps>`
   outline: none;
   font-size: 1.5rem;
   box-shadow: 0 0 0 1px ${({ theme }) => theme["neutral-700"]};
-  border: 1px solid ${({ theme, error }) => (error ? theme["danger-700"] : theme["neutral-700"])};
-  border-radius: 10px 0 0 10px;
+  border: 1px solid
+    ${({ theme, error }) =>
+      error ? theme["danger-700"] : theme["neutral-700"]};
+  border-radius: 6px 0 0 6px;
 
   &:focus {
-    box-shadow: 0 0 0 2px ${({ theme, error }) => (error ? theme["danger-700"] : theme["primary-800"])};
+    box-shadow: 0 0 0 2px
+      ${({ theme, error }) =>
+        error ? theme["danger-700"] : theme["primary-800"]};
 
     + button {
       height: 4.7rem;
@@ -71,11 +126,12 @@ export const Button = styled.button<FormProps>`
   font-weight: 600;
   border: none;
   padding: 0 1.8rem;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 6px 6px 0;
   transition: 0.4s;
   cursor: ${({ error }) => (error ? "not-allowed" : "pointer")};
 
-  background: ${({ theme, error }) => error ? theme["primary-950"] : theme["primary-600"]};
+  background: ${({ theme, error }) =>
+    error ? theme["primary-950"] : theme["primary-600"]};
   color: ${({ theme }) => theme.white};
 
   &:hover {
@@ -85,7 +141,27 @@ export const Button = styled.button<FormProps>`
 `;
 
 export const InputError = styled.div`
-  color: ${({ theme }) => theme['danger-700']};
+  color: ${({ theme }) => theme["danger-100"]};
   margin-top: 0.5rem;
   font-size: 1.2rem;
+  
+  @media (min-width: 660px) {
+    &.error-mobile {
+      display: none;
+    }
+
+    &.error-desktop {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 660px) {
+    &.error-mobile {
+      display: block;
+    }
+
+    &.error-desktop {
+      display: none;
+    }
+  }
 `;
