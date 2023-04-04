@@ -47,7 +47,8 @@ export const Grid = styled.div`
 
   @media (max-width: 800px) {
     gap: 3.7rem;
-    margin: 6.4rem 0 8rem;
+    margin: 6.4rem 0 0;
+    padding-bottom: 8rem;
   }
 
   @media (max-width: 630px) {

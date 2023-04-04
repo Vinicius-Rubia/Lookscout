@@ -28,7 +28,8 @@ export const Content = styled.div`
   @media (max-width: 550px) {
     h2 {
       font-size: 3rem;
-      margin: 3.2rem auto 1.2rem;
+      margin: 0 auto 1.2rem;
+      padding-top: 3.2rem;
     }
   }
 
@@ -47,12 +48,14 @@ export const Grid = styled.div`
   gap: 3.2rem;
 
   @media (max-width: 900px) {
-    margin: 7rem 0 8.8rem;
+    margin: 7rem 0 0;
+    padding-bottom: 8.8rem;
     grid-template-columns: 1fr 1fr;
   }
 
   @media (max-width: 550px) {
-    margin: 2.4rem 0 6.4rem;
+    margin: 2.4rem 0 0;
+    padding-bottom: 6.4rem;
     grid-template-columns: 1fr;
   }
 `;
