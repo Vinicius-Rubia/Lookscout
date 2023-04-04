@@ -4,6 +4,7 @@ export const Content = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
   padding: 2.4rem 3.2rem;
   background-color: ${({ theme }) => theme.colors.backgroundSecundary};
+  border-radius: 5px;
 
   h3 {
     margin: 2.4rem 0 0.8rem;

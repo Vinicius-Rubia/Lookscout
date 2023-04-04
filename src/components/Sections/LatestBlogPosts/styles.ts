@@ -107,8 +107,8 @@ export const Header = styled.div`
 `;
 
 export const Category = styled.span`
-  color: ${({ theme }) => theme.colors.secundary};
-  background: ${({ theme }) => theme.colors.borderColor};
+  color: ${({ theme }) => theme.colors.category};
+  background: ${({ theme }) => theme.colors.primary25};
   padding: 0.4rem 1.2rem;
   border-radius: 5px;
 `;

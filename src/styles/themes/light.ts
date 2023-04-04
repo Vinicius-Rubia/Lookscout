@@ -16,6 +16,10 @@ export default {
     text: "#333",
 
     menu: "#151B28",
+    category: "#437EF7",
+
+    bgColor: "#2B63D9",
+    teste: "#B1CCFB",
 
     title: "#272D37",
     paragraph: "#5F6D7E",

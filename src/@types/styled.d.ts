@@ -12,6 +12,11 @@ declare module "styled-components" {
       backgroundSecundary: string,
       borderColor: string,
 
+      bgColor: string,
+      teste: string,
+      category: string,
+
+
       white: string,
       black: string,
 

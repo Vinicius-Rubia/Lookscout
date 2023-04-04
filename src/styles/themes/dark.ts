@@ -17,8 +17,12 @@ export default {
     
     menu: "#151B28",
 
+    bgColor: "#1C2534",
+    teste: "#A5ACBA",
+
     title: "#272D37",
     paragraph: "#5F6D7E",
+    category: "#F9F9F9",
 
     buttonSolid: "#437EF7",
     buttonOutline: "#2E3545",
@@ -29,7 +33,7 @@ export default {
     // NEUTRAL
     neutral25: "#FCFCFD",
     neutral50: "#FAFBFC",
-    neutral100: "#F8F9FB",
+    neutral100: "#151B28",
     neutral200: "#F9F9F9",
     neutral300: "#F7F7F8",
     neutral400: "#F5F5F5",

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors.neutral100};
   
   img {
     width: 100%;    
