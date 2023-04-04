@@ -15,6 +15,8 @@ export default {
     background: "#F5F5F5",
     text: "#333",
 
+    menu: "#151B28",
+
     title: "#272D37",
     paragraph: "#5F6D7E",
 

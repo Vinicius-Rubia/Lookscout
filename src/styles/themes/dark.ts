@@ -19,6 +19,8 @@ export default {
     borderButton: "#2E3545",
     textButton: "#FFF",
 
+    menu: "#151B28",
+
     // NEUTRAL
     neutral25: "#FCFCFD",
     neutral50: "#FAFBFC",
@@ -48,7 +50,7 @@ export default {
     text950: "#151B28",
 
     // PRIMARY
-    primary25: "#F5FAFF",
+    primary25: "#252D3C",
     primary50: "#F5F8FE",
     primary100: "#E8EFFD",
     primary200: "#B1CCFB",

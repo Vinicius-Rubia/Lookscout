@@ -24,6 +24,7 @@ declare module "styled-components" {
       borderButton: string,
       textButton: string,
     
+      menu: string,
 
 
       background: string;

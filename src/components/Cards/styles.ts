@@ -29,7 +29,7 @@ export const CardHeader = styled.div`
   align-items: center;
 
   img {
-    background: ${({ theme }) => theme.colors.borderColor};
+    background: ${({ theme }) => theme.colors.primary25};
     width: 48px;
     height: 48px;
     border-radius: 50%;

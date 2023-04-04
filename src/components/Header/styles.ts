@@ -22,6 +22,10 @@ export const Content = styled.div`
   @media (max-width: 1300px) {
     margin: 0 2rem;
   }
+
+  @media (max-width: 930px) {
+    padding-right: 6rem;
+  }
 `;
 
 export const Nav = styled.div`
@@ -39,16 +43,17 @@ export const Navigation = styled.div<MenuProps>`
   justify-content: space-between;
   transition: 0.2s ease-in-out;
 
-  @media (max-width: 870px) {
+  @media (max-width: 930px) {
     position: fixed;
     top: 0;
-    left: ${({ showMenu }) => (showMenu ? "0" : "-25rem")};
+    left: ${({ showMenu }) => (showMenu ? "0" : "-26rem")};
     bottom: 0;
     z-index: 1;
     background-color: ${({ theme }) => theme.colors.primary};
     width: 25rem;
     flex-direction: column;
     align-items: start;
+    border-right: 1px solid ${({ theme}) => theme.colors.neutral900};
     padding: 7rem 3rem 3rem;
   }
 `;
@@ -77,7 +82,7 @@ export const NavContent = styled.nav`
     }
   }
 
-  @media (max-width: 870px) {
+  @media (max-width: 930px) {
     margin-left: 0;
     flex: 1;
 
@@ -86,12 +91,12 @@ export const NavContent = styled.nav`
       align-items: start;
 
       li {
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid ${({ theme }) => theme.colors.text700};
         padding-bottom: 1rem;
         width: 100%;
 
         a {
-          color: ${({ theme }) => theme.colors["neutral-200"]};
+          color: ${({ theme }) => theme.colors.text700};
         }
       }
     }
@@ -103,18 +108,19 @@ export const MenuMobile = styled.div`
   right: 3rem;
   z-index: 99;
 
-  @media (min-width: 870px) {
+  @media (min-width: 930px) {
     display: none;
   }
 
   svg {
-    color: ${({ theme }) => theme.colors["gray-700"]};
+    color: ${({ theme }) => theme.colors.text700};
   }
 `;
 
 export const Login = styled.div`
   display: flex;
   gap: 2.4rem;
+  margin-right: 2rem;
   transition: 0.2s;
 
   a:first-child {
@@ -125,7 +131,7 @@ export const Login = styled.div`
     }
   }
 
-  @media (max-width: 870px) {
+  @media (max-width: 930px) {
     flex-direction: column-reverse;
     width: 100%;
   }
