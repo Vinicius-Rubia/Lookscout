@@ -1,9 +1,11 @@
-import React from "react";
-import Logo from "../../assets/images/logo-light.svg";
+import React, { useContext } from "react";
 import { BsFillHexagonFill, BsFacebook, BsGoogle, BsApple, BsInstagram } from "react-icons/bs";
 import { StyledParagraph, StyledTitle } from "../../styles/typography";
+import LogoDark from "../../assets/images/logo-dark.svg";
+import LogoLight from "../../assets/images/logo-light.svg";
 
 import * as C from "./styles";
+import { ThemeContext } from "styled-components";
 
 const menuNavigation = [
   {
@@ -29,13 +31,15 @@ const menuNavigation = [
 ]
 
 const Footer: React.FC = () => {
+  const { title } = useContext(ThemeContext);
+
   return (
     <C.Container>
       <C.Content>
         <C.Grid>
           <C.Col>
             <a href="#">
-              <img src={Logo} alt="Lookscout" />
+              <img src={title == "dark" ? LogoLight: LogoDark} alt="Lookscout" />
             </a>
             <StyledParagraph className="description" fontSize="md">
               Generate outside the box thinking with the possibility to targtet

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  background: ${({ theme }) => theme.colors.primary};
+`;
 
 export const Content = styled.div`
   max-width: 1215px;
@@ -8,11 +10,12 @@ export const Content = styled.div`
 
   h2 {
     text-align: center;
-    margin: 6.4rem auto 1.6rem;
+    margin: 0 auto 1.6rem;
+    padding-top: 6.4rem;
   }
 
   & > .description {
-    color: ${({ theme }) => theme["gray-50"]};
+    color: ${({ theme }) => theme.colors.textColorSecundary};
     text-align: center;
     max-width: 80rem;
     margin: 0 auto;
@@ -37,7 +40,8 @@ export const Content = styled.div`
 `;
 
 export const Grid = styled.div`
-  margin: 7rem 0 12.8rem;
+  margin: 7rem 0 0;
+  padding-bottom: 12.8rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3.2rem;
@@ -56,7 +60,8 @@ export const Grid = styled.div`
 export const Post = styled.div`
   position: relative;
   border-radius: 10px;
-  border: 1px solid ${({ theme }) => theme["neutral-600"]};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
+  background: ${({ theme }) => theme.colors.backgroundSecundary};
 `;
 
 export const ImgPost = styled.img`
@@ -79,7 +84,7 @@ export const ContentPost = styled.div`
   }
 
   p {
-    color: ${({ theme }) => theme["gray-50"]};
+    color: ${({ theme }) => theme.colors.textColorSecundary};
   }
 
   a {
@@ -102,8 +107,8 @@ export const Header = styled.div`
 `;
 
 export const Category = styled.span`
-  color: ${({ theme }) => theme["primary-600"]};
-  background: ${({ theme }) => theme["primary-25"]};
+  color: ${({ theme }) => theme.colors.secundary};
+  background: ${({ theme }) => theme.colors.borderColor};
   padding: 0.4rem 1.2rem;
   border-radius: 5px;
 `;

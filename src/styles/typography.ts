@@ -3,7 +3,7 @@ import Title from "./components/Typography";
 
 export const StyledTitle = styled(Title)`
   font-weight: ${({ fontWeight }) => fontWeight};
-  color: ${({ theme }) => theme["gray-700"]};
+  color: ${({ theme }) => theme.colors.textColorPrimary};
 
   ${({ fontSize }) => {
     switch (fontSize) {

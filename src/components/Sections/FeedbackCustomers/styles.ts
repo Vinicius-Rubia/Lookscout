@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  background: ${({ theme }) => theme.colors.primary};
+`;
 
 export const Content = styled.div`
   max-width: 1215px;
@@ -12,7 +14,7 @@ export const Content = styled.div`
   }
 
   & > .description {
-    color: ${({ theme }) => theme["gray-50"]};
+    color: ${({ theme }) => theme.colors.textColorSecundary};
     text-align: center;
     max-width: 85rem;
     margin: 0 auto;
@@ -36,7 +38,8 @@ export const Content = styled.div`
 `;
 
 export const Grid = styled.div`
-  margin: 6.4rem 0 17rem;
+  margin: 6.4rem 0 0;
+  padding-bottom: 17rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 13.3rem;
@@ -57,6 +60,7 @@ export const Item = styled.div`
 
   p {
     font-weight: 500;
+    color: ${({ theme }) => theme.colors.textColorPrimary};
   }
 
   div {

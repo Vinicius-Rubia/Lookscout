@@ -12,7 +12,6 @@ import Footer from "../../components/Footer";
 const Home: React.FC = () => {
   return (
     <C.Container>
-      <Header />
       <Started />
       <ChannelsReview />
       <ProductFeatures />

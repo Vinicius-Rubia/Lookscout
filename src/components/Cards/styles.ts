@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  border: 1px solid ${({ theme }) => theme["neutral-600"]};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
   padding: 2.4rem 3.2rem;
+  background-color: ${({ theme }) => theme.colors.backgroundSecundary};
 
   h3 {
     margin: 2.4rem 0 0.8rem;
   }
 
   p {
-    color: ${({ theme }) => theme["gray-50"]};
+    color: ${({ theme }) => theme.colors.textColorSecundary};
   }
 
   @media (max-width: 550px) {
@@ -28,7 +29,7 @@ export const CardHeader = styled.div`
   align-items: center;
 
   img {
-    background: ${({ theme }) => theme["primary-25"]};
+    background: ${({ theme }) => theme.colors.borderColor};
     width: 48px;
     height: 48px;
     border-radius: 50%;

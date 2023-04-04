@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: ${({ theme }) => theme["primary-900"]};
+  background: ${({ theme }) => theme.colors.backgroundSecundary};
   display: flex;
   margin: 0 auto;
 `;
@@ -13,7 +13,7 @@ export const Content = styled.div`
 
 export const TagTitle = styled.span`
   text-transform: uppercase;
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.colors.textColorSecundary};
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.8rem;
@@ -46,11 +46,11 @@ export const RightSide = styled.div`
 
   h2 {
     margin: 1rem 0 1.6rem;
-    color: ${({ theme }) => theme.white};
+    color: ${({ theme }) => theme.colors.textColorPrimary};
   }
 
   .description {
-    color: ${({ theme }) => theme["primary-200"]};
+    color: ${({ theme }) => theme.colors.textColorSecundary};
     margin-bottom: 4rem;
   }
 

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: ${({ theme }) => theme["neutral-50"]};
+  background: ${({ theme }) => theme.colors.primary};
   
   img {
     width: 100%;    
@@ -23,7 +23,7 @@ export const Content = styled.div`
   }
 
   & > .description {
-    color: ${({ theme }) => theme["gray-50"]};
+    color: ${({ theme }) => theme.colors.textColorSecundary};
     text-align: center;
     max-width: 82rem;
     margin: 0 auto;

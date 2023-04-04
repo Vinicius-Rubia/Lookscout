@@ -5,7 +5,7 @@ interface FormProps {
 }
 
 export const Container = styled.div`
-  background: ${({ theme }) => theme["primary-900"]};
+  background: ${({ theme }) => theme.colors.primary900};
   padding: 6.4rem 0;
 `;
 
@@ -15,7 +15,7 @@ export const Content = styled.div`
 
   h2 {
     margin-top: 1rem;
-    color: ${({ theme }) => theme.white};
+    color: ${({ theme }) => theme.colors.white};
   }
 
   @media (max-width: 1300px) {
@@ -46,7 +46,7 @@ export const Grid = styled.div`
 
     p {
       margin-top: 2.4rem;
-      color: ${({ theme }) => theme["primary-200"]};
+      color: ${({ theme }) => theme.colors.primary200};
     }
   }
 
@@ -62,7 +62,7 @@ export const Grid = styled.div`
 
 export const TagTitle = styled.span`
   text-transform: uppercase;
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.colors.white};
   font-size: 1.4rem;
   font-weight: 600;
   margin-left: 6.4rem;
@@ -99,16 +99,15 @@ export const Input = styled.input<FormProps>`
   padding: 1.2rem 1.6rem;
   outline: none;
   font-size: 1.5rem;
-  box-shadow: 0 0 0 1px ${({ theme }) => theme["neutral-700"]};
   border: 1px solid
     ${({ theme, error }) =>
-      error ? theme["danger-700"] : theme["neutral-700"]};
+      error ? theme.colors.danger700 : theme.colors.primary600};
   border-radius: 6px 0 0 6px;
 
   &:focus {
     box-shadow: 0 0 0 2px
       ${({ theme, error }) =>
-        error ? theme["danger-700"] : theme["primary-800"]};
+        error ? theme.colors.danger700 : theme.colors.primary800};
 
     + button {
       height: 4.7rem;
@@ -116,7 +115,7 @@ export const Input = styled.input<FormProps>`
   }
 
   &::placeholder {
-    color: ${({ theme }) => theme["gray-25"]};
+    color: ${({ theme }) => theme.colors.textColorSecundary};
   }
 `;
 
@@ -131,8 +130,8 @@ export const Button = styled.button<FormProps>`
   cursor: ${({ error }) => (error ? "not-allowed" : "pointer")};
 
   background: ${({ theme, error }) =>
-    error ? theme["primary-950"] : theme["primary-600"]};
-  color: ${({ theme }) => theme.white};
+    error ? theme.colors.primary950 : theme.colors.primary600};
+  color: ${({ theme }) => theme.colors.white};
 
   &:hover {
     filter: brightness(1.1);
@@ -141,7 +140,7 @@ export const Button = styled.button<FormProps>`
 `;
 
 export const InputError = styled.div`
-  color: ${({ theme }) => theme["danger-100"]};
+  color: ${({ theme }) => theme.colors.danger100};
   margin-top: 0.5rem;
   font-size: 1.2rem;
   

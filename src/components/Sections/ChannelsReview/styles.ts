@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  background: ${({ theme }) => theme.colors.primary};
+`;
 
 export const Content = styled.div`
   max-width: 1215px;
@@ -18,7 +20,7 @@ export const Content = styled.div`
   }
 
   .description {
-    color: ${({ theme }) => theme["gray-50"]};
+    color: ${({ theme }) => theme.colors.textColorSecundary};
     text-align: center;
     margin-bottom: 6.4rem;
   }

@@ -1,13 +1,22 @@
-import React, { useState, useEffect } from "react";
-import Logo from "../../assets/images/logo-dark.svg";
+import React, { useState, useEffect, useContext } from "react";
 import { HiOutlineMenu } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
+import { shade } from "polished";
+import { ThemeContext } from "styled-components";
 import { StyledButton } from "../../styles/components/button";
+import Switch from "react-switch";
+import LogoDark from "../../assets/images/logo-dark.svg";
+import LogoLight from "../../assets/images/logo-light.svg";
 
 import * as C from "./styles";
 
-const Header: React.FC = () => {
+interface Props {
+  toogleTheme(): void;
+}
+
+const Header: React.FC<Props> = ({ toogleTheme }) => {
   const [menu, setMenu] = useState(false);
+  const { colors, title } = useContext(ThemeContext);
 
   const handleToogleMenu = () => {
     setMenu(!menu);
@@ -24,7 +33,7 @@ const Header: React.FC = () => {
     <C.Container>
       <C.Content>
         <a href="#">
-          <img src={Logo} alt="Lookscout" />
+          <img src={title == "dark" ? LogoLight: LogoDark} alt="Lookscout" />
         </a>
         <C.MenuMobile>
           {menu ? (
@@ -61,6 +70,17 @@ const Header: React.FC = () => {
             </StyledButton>
           </C.Login>
         </C.Navigation>
+        <Switch
+          onChange={toogleTheme}
+          checked={title === "dark"}
+          checkedIcon={false}
+          uncheckedIcon={false}
+          height={25}
+          width={55}
+          handleDiameter={17}
+          offColor={shade(0.15, colors.borderColor)}
+          onColor={colors.secundary}
+        />
       </C.Content>
     </C.Container>
   );
