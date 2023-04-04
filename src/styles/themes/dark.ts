@@ -2,6 +2,9 @@ export default {
   title: "dark",
 
   colors: {
+    white: "#fff",
+    black: "#000",
+
     primary: "#151B28",
     secundary: "#437EF7",
     textColorPrimary: "#F9F9F9",
@@ -11,15 +14,17 @@ export default {
 
     background: "#222",
     text: "#FFF",
-    white: "#fff",
-    black: "#000",
+    
+    menu: "#151B28",
+
+    title: "#272D37",
+    paragraph: "#5F6D7E",
 
     buttonSolid: "#437EF7",
     buttonOutline: "#2E3545",
     borderButton: "#2E3545",
     textButton: "#FFF",
 
-    menu: "#151B28",
 
     // NEUTRAL
     neutral25: "#FCFCFD",
