@@ -1,18 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors["white/gray950"]};
   padding: 4rem 0 0;
 `;
 
 export const Content = styled.div`
   max-width: 1215px;
   margin: 0 auto;
-
-  .description {
-    color: ${({ theme }) => theme.colors.textColorSecundary};
-  }
-
   @media (max-width: 1300px) {
     margin: 0 2rem;
   }
@@ -23,7 +18,7 @@ export const SocialIcons = styled.div`
   gap: 2.4rem;
 
   svg {
-    color: ${({ theme }) => theme.colors.textColorPrimary};
+    color: ${({ theme }) => theme.colors["gray700/neutral200"]};
   }
 
   @media (max-width: 550px) {
@@ -68,12 +63,12 @@ export const Col = styled.div`
   gap: 2rem;
 
   h4 {
-    color: ${({ theme }) => theme.colors.textColorPrimary};
+    color: ${({ theme }) => theme.colors["gray700/neutral200"]};
   }
 
   a {
     font-size: 1.6rem;
-    color: ${({ theme }) => theme.colors.textColorSecundary};
+    color: ${({ theme }) => theme.colors["gray50/neutral800"]};
 
     &:hover {
       text-decoration: underline;

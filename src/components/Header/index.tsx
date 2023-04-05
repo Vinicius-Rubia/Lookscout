@@ -23,7 +23,6 @@ const Header: React.FC<Props> = ({ toogleTheme }) => {
   };
 
   useEffect(() => {
-    console.log(menu);
     menu
       ? (window.document.body.style.overflow = "hidden")
       : (window.document.body.style.overflow = "auto");
@@ -78,8 +77,8 @@ const Header: React.FC<Props> = ({ toogleTheme }) => {
           height={25}
           width={55}
           handleDiameter={17}
-          offColor={shade(0.15, colors.borderColor)}
-          onColor={colors.secundary}
+          offColor={shade(0.15, colors.neutral200)}
+          onColor={colors.primary600}
         />
       </C.Content>
     </C.Container>

@@ -33,10 +33,6 @@ export const LeftSide = styled.div`
     margin: 1rem 0 1.6rem;
   }
 
-  .description {
-    color: ${({ theme }) => theme.colors.textColorSecundary};
-  }
-
   @media (max-width: 500px) {
     h2 {
       font-size: 2.5rem;
@@ -64,11 +60,11 @@ export const Items = styled.div`
     margin-bottom: 1rem;
 
     p {
-      color: ${({ theme }) => theme.colors.textColorPrimary};
+      color: ${({ theme }) => theme.colors["gray700/white"]};
     }
 
     svg {
-      color: ${({ theme }) => theme.colors.secundary};
+      color: ${({ theme }) => theme.colors.primary600};
     }
   }
 `;

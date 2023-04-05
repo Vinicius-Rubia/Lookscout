@@ -14,7 +14,7 @@ export const StyledButton = styled.a<iStyledButtonProps>`
 
   font-size: 1.5rem;
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.buttonSolid};
+  color: ${({ theme }) => theme.colors.primary600};
   border: none;
   border-radius: 6px;
   transition: 0.2s;
@@ -38,7 +38,7 @@ export const StyledButton = styled.a<iStyledButtonProps>`
     switch (buttonStyle) {
       case "solid":
         return css`
-          background: ${theme.colors.buttonSolid};
+          background: ${theme.colors.primary600};
           color: ${theme.colors.white};
 
           &:hover {
@@ -48,13 +48,13 @@ export const StyledButton = styled.a<iStyledButtonProps>`
         `;
       case "outline":
         return css`
-          border: 1px solid ${theme.colors.borderButton};
-          background: ${theme.colors.buttonOutline};
-          color: ${theme.colors.textButton};
+          border: 1px solid ${theme.colors["neutral700/gray600"]};
+          background: ${theme.colors["white/neutral700"]};
+          color: ${theme.colors["gray700/white"]};
 
           &:hover {
-            border: 1px solid ${theme.colors.textButton};
-            color: ${theme.colors.textButton};
+            border: 1px solid ${theme.colors["gray700/white"]};
+            color: ${theme.colors["gray700/white"]};
           }
         `;
     }

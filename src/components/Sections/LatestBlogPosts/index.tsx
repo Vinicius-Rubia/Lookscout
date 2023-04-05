@@ -66,7 +66,7 @@ const LatestBlogPosts: React.FC = () => {
               <C.ContentPost>
                 <C.Header>
                   <C.Category>{post.category}</C.Category>
-                  <p>{post.date}</p>
+                  <StyledParagraph fontSize="md">{post.date}</StyledParagraph>
                 </C.Header>
                 <StyledTitle tag="h3" fontSize="sm" fontWeight={600}>
                   {post.title}

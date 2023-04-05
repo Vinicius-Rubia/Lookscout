@@ -3,7 +3,7 @@ import Title from "./components/Typography";
 
 export const StyledTitle = styled(Title)`
   font-weight: ${({ fontWeight }) => fontWeight};
-  color: ${({ theme }) => theme.colors.textColorPrimary};
+  color: ${({ theme }) => theme.colors["gray700/neutral200"]};
 
   ${({ fontSize }) => {
     switch (fontSize) {
@@ -35,6 +35,7 @@ interface iStyledParagraph {
 
 export const StyledParagraph = styled.p<iStyledParagraph>`
   line-height: 24px;
+  color: ${({ theme }) => theme.colors["gray50/neutral800"]};
   
   ${({ fontSize }) => {
     switch (fontSize) {

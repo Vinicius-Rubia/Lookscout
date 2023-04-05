@@ -9,7 +9,7 @@ export const Content = styled.div`
 
 export const TagTitle = styled.span`
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.textColorSecundary};
+  color: ${({ theme }) => theme.colors.primary600};
   font-size: 1.4rem;
   font-weight: 600;
 `;
@@ -38,7 +38,6 @@ export const LeftSide = styled.div`
   }
 
   .description {
-    color: ${({ theme }) => theme.colors.textColorSecundary};
     margin-bottom: 4rem;
   }
 

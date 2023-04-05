@@ -107,15 +107,7 @@ export const Input = styled.input<FormProps>`
   &:focus {
     box-shadow: 0 0 0 2px
       ${({ theme, error }) =>
-        error ? theme.colors.danger700 : theme.colors.primary800};
-
-    + button {
-      height: 4.7rem;
-    }
-  }
-
-  &::placeholder {
-    color: ${({ theme }) => theme.colors.textColorSecundary};
+        error ? theme.colors.danger700 : theme.colors.primary600};
   }
 `;
 
@@ -140,7 +132,7 @@ export const Button = styled.button<FormProps>`
 `;
 
 export const InputError = styled.div`
-  color: ${({ theme }) => theme.colors.danger100};
+  color: ${({ theme }) => theme.colors.white};
   margin-top: 0.5rem;
   font-size: 1.2rem;
   

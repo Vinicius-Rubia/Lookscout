@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors["white/gray950"]};
 `;
 
 export const Content = styled.div`
@@ -15,7 +15,6 @@ export const Content = styled.div`
   }
 
   & > .description {
-    color: ${({ theme }) => theme.colors.textColorSecundary};
     text-align: center;
     max-width: 80rem;
     margin: 0 auto;
@@ -63,8 +62,8 @@ export const Grid = styled.div`
 export const Post = styled.div`
   position: relative;
   border-radius: 10px;
-  border: 1px solid ${({ theme }) => theme.colors.borderColor};
-  background: ${({ theme }) => theme.colors.backgroundSecundary};
+  border: 1px solid ${({ theme }) => theme.colors["neutral600/neutral700"]};
+  background: ${({ theme }) => theme.colors["white/gray900"]};
 `;
 
 export const ImgPost = styled.img`
@@ -84,10 +83,6 @@ export const ContentPost = styled.div`
 
   h3 {
     margin: 2rem 0 1.6rem;
-  }
-
-  p {
-    color: ${({ theme }) => theme.colors.textColorSecundary};
   }
 
   a {
@@ -110,8 +105,8 @@ export const Header = styled.div`
 `;
 
 export const Category = styled.span`
-  color: ${({ theme }) => theme.colors.category};
-  background: ${({ theme }) => theme.colors.primary25};
+  color: ${({ theme }) => theme.colors["primary600/neutral200"]};
+  background: ${({ theme }) => theme.colors["primary25/gray800"]};
   padding: 0.4rem 1.2rem;
   border-radius: 5px;
 `;

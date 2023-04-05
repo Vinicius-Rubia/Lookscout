@@ -5,11 +5,11 @@ interface MenuProps {
 }
 
 export const Container = styled.header`
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors["neutral100/gray950"]};
   display: flex;
   justify-content: space-between;
   height: 86px;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral700};
+  border-bottom: 1px solid ${({ theme }) => theme.colors["neutral600/neutral700"]};
 `;
 
 export const Content = styled.div`
@@ -49,7 +49,7 @@ export const Navigation = styled.div<MenuProps>`
     left: ${({ showMenu }) => (showMenu ? "0" : "-26rem")};
     bottom: 0;
     z-index: 1;
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.gray950};
     width: 25rem;
     flex-direction: column;
     align-items: start;
@@ -73,7 +73,7 @@ export const NavContent = styled.nav`
       font-weight: 600;
 
       a {
-        color: ${({ theme }) => theme.colors.text700};
+        color: ${({ theme }) => theme.colors["gray700/neutral200"]};
 
         &:hover {
           color: ${({ theme }) => theme.colors.primary600};
@@ -91,12 +91,12 @@ export const NavContent = styled.nav`
       align-items: start;
 
       li {
-        border-bottom: 1px solid ${({ theme }) => theme.colors.text700};
+        border-bottom: 1px solid ${({ theme }) => theme.colors.neutral200};
         padding-bottom: 1rem;
         width: 100%;
 
         a {
-          color: ${({ theme }) => theme.colors.text700};
+          color: ${({ theme }) => theme.colors.neutral200};
         }
       }
     }
@@ -113,7 +113,7 @@ export const MenuMobile = styled.div`
   }
 
   svg {
-    color: ${({ theme }) => theme.colors.text700};
+    color: ${({ theme }) => theme.colors["gray700/neutral200"]};
   }
 `;
 
