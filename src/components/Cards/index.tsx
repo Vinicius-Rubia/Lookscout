@@ -1,5 +1,4 @@
 import React from "react";
-import { StyledButton } from "../../styles/components/button";
 import { StyledParagraph, StyledTitle } from "../../styles/typography";
 import Browser from "../../assets/icons/browser.svg";
 import Lamp from "../../assets/icons/lamp.svg";
@@ -8,8 +7,10 @@ import Socket from "../../assets/icons/socket.svg";
 import Star from "../../assets/icons/star.svg";
 import User from "../../assets/icons/user.svg";
 import * as C from "./styles";
+import Button from "../../shared/Button";
+import { Link } from "react-router-dom";
 
-interface ICardProps {
+interface ICard {
   id: number;
   title: string;
   paragraph: string;
@@ -58,13 +59,15 @@ const cards = [
 const Cards: React.FC = () => {
   return (
     <>
-      {cards.map((card: ICardProps) => (
+      {cards.map((card: ICard) => (
         <C.Content key={card.id}>
           <C.CardHeader>
             <img src={card.icon} />
-            <StyledButton href="#" buttonSize="md" buttonStyle="outline">
-              Show more
-            </StyledButton>
+            <Link to="/">
+              <Button buttonSize="md" buttonStyle="outline">
+                Show more
+              </Button>
+            </Link>
           </C.CardHeader>
           <StyledTitle fontSize="sm" tag="h3" fontWeight={600}>
             {card.title}

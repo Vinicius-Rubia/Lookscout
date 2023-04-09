@@ -1,5 +1,4 @@
 import React from "react";
-import * as C from "./styles";
 import { StyledParagraph, StyledTitle } from "../../../styles/typography";
 
 import Post1 from "../../../assets/images/post1.png";
@@ -8,8 +7,10 @@ import Post3 from "../../../assets/images/post3.png";
 import Avatar1 from "../../../assets/images/avatar1.png";
 import Avatar2 from "../../../assets/images/avatar2.png";
 import Avatar3 from "../../../assets/images/avatar3.png";
-import { StyledButton } from "../../../styles/components/button";
 import { HiArrowRight } from "react-icons/hi";
+import * as C from "./styles";
+import Button from "../../../shared/Button";
+import { Link } from "react-router-dom";
 
 const posts = [
   {
@@ -74,10 +75,12 @@ const LatestBlogPosts: React.FC = () => {
                 <StyledParagraph fontSize="md">
                   {post.description}
                 </StyledParagraph>
-                <StyledButton href="#" buttonSize="md">
-                  Learn more
-                  <HiArrowRight size={20} />
-                </StyledButton>
+                <Link to="/">
+                  <Button buttonSize="md">
+                    Learn more
+                    <HiArrowRight size={20} />
+                  </Button>
+                </Link>
               </C.ContentPost>
             </C.Post>
           ))}

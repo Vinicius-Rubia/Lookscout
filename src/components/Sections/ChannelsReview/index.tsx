@@ -1,6 +1,7 @@
 import React from "react";
-import { StyledButton } from "../../../styles/components/button";
 import { StyledParagraph, StyledTitle } from "../../../styles/typography";
+import Button from "../../../shared/Button";
+import { Link } from "react-router-dom";
 import Cards from "../../Cards";
 import * as C from "./styles";
 
@@ -18,9 +19,9 @@ const ChannelsReview: React.FC = () => {
         <C.CardContainer>
           <Cards />
         </C.CardContainer>
-        <StyledButton href="#" buttonSize="md" buttonStyle="solid">
-          Reveal all channels
-        </StyledButton>
+        <Link to="/">
+          <Button buttonSize="md" buttonStyle="solid">Reveal all channels</Button>
+        </Link>
       </C.Content>
     </C.Container>
   );

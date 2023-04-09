@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import { BsFillHexagonFill, BsFacebook, BsGoogle, BsApple, BsInstagram } from "react-icons/bs";
+import { BsFillHexagonFill, BsFacebook, BsGoogle, BsApple, BsInstagram} from "react-icons/bs";
 import { StyledParagraph, StyledTitle } from "../../styles/typography";
+import { ThemeContext } from "styled-components";
 import LogoDark from "../../assets/images/logo-dark.svg";
 import LogoLight from "../../assets/images/logo-light.svg";
-
 import * as C from "./styles";
-import { ThemeContext } from "styled-components";
+import { Link } from "react-router-dom";
 
 const menuNavigation = [
   {
@@ -28,7 +28,7 @@ const menuNavigation = [
     title: "Company",
     items: ["About Us", "News", "Leadership", "Media Kit"],
   },
-]
+];
 
 const Footer: React.FC = () => {
   const { title } = useContext(ThemeContext);
@@ -38,44 +38,51 @@ const Footer: React.FC = () => {
       <C.Content>
         <C.Grid>
           <C.Col>
-            <a href="#">
-              <img src={title == "dark" ? LogoLight: LogoDark} alt="Lookscout" />
-            </a>
+            <Link to="/">
+              <img
+                src={title == "dark" ? LogoLight : LogoDark}
+                alt="Lookscout"
+              />
+            </Link>
             <StyledParagraph className="description" fontSize="md">
               Generate outside the box thinking with the possibility to targtet
               the low.
             </StyledParagraph>
             <C.SocialIcons>
-              <a href="#">
+              <Link to="/">
                 <BsFacebook fontSize={24} />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/">
                 <BsGoogle fontSize={24} />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/">
                 <BsApple fontSize={24} />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/">
                 <BsInstagram fontSize={24} />
-              </a>
+              </Link>
             </C.SocialIcons>
           </C.Col>
           <C.MenuNavigation>
-           {menuNavigation.map((menu) => (
-            <C.Col key={menu.id}>
-            <StyledTitle tag="h4" fontSize="ls" fontWeight={600}>
-              {menu.title}
-            </StyledTitle>
-            {menu.items.map((item) => (
-              <a key={item} href="#">{item}</a>
+            {menuNavigation.map((menu) => (
+              <C.Col key={menu.id}>
+                <StyledTitle tag="h4" fontSize="ls" fontWeight={600}>
+                  {menu.title}
+                </StyledTitle>
+                {menu.items.map((item) => (
+                  <Link key={item} to="/">
+                    {item}
+                  </Link>
+                ))}
+              </C.Col>
             ))}
-            </C.Col>
-           ))}
           </C.MenuNavigation>
         </C.Grid>
         <C.Copyright>
           <BsFillHexagonFill fill="#437EF7" fontSize={24} />
-          <StyledParagraph className="description" fontSize="md">&copy; 2023 Lookscout. All Rights Reserved.</StyledParagraph>
+          <StyledParagraph className="description" fontSize="md">
+            &copy; 2023 Lookscout. All Rights Reserved.
+          </StyledParagraph>
         </C.Copyright>
       </C.Content>
     </C.Container>

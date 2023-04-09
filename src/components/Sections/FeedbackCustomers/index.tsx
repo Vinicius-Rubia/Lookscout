@@ -1,12 +1,11 @@
 import React from "react";
-import * as C from "./styles";
 import { StyledParagraph, StyledTitle } from "../../../styles/typography";
-
 import Avatar1 from "../../../assets/images/avatar1.png";
 import Avatar2 from "../../../assets/images/avatar2.png";
 import Avatar3 from "../../../assets/images/avatar3.png";
 import { HiStar } from "react-icons/hi";
 import { HiCreditCard } from "react-icons/hi";
+import * as C from "./styles";
 
 const FeedbackCustomers: React.FC = () => {
   return (

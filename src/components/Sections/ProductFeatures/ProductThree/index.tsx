@@ -1,19 +1,16 @@
 import React from "react";
 import ImageProduct from "../../../../assets/images/illustration4.png";
 import { StyledParagraph, StyledTitle } from "../../../../styles/typography";
-import { StyledButton } from "../../../../styles/components/button";
 import { HiArrowRight } from "react-icons/hi";
 import { HiCheck } from "react-icons/hi";
 import * as C from "./styles";
+import Button from "../../../../shared/Button";
+import { Link } from "react-router-dom";
 
 const items = [
   { id: 1, icon: <HiCheck size={24} />, text: "Enterprise-grade security" },
   { id: 2, icon: <HiCheck size={24} />, text: "99.9% guaranteed uptime SLA" },
-  {
-    id: 3,
-    icon: <HiCheck size={24} />,
-    text: "Designated customer success team",
-  },
+  { id: 3, icon: <HiCheck size={24} />, text: "Designated customer success team"},
 ];
 
 const ProductThree: React.FC = () => {
@@ -38,10 +35,12 @@ const ProductThree: React.FC = () => {
                 </div>
               ))}
             </C.Items>
-            <StyledButton href="#" buttonSize="md" buttonStyle="solid">
+            <Link to="/">
+            <Button buttonSize="md" buttonStyle="solid">
               Start now
               <HiArrowRight size={20} />
-            </StyledButton>
+            </Button>
+            </Link>
           </C.LeftSide>
           <C.RightSide>
             <img src={ImageProduct} alt="Illustration" />

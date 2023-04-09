@@ -1,9 +1,10 @@
 import React from "react";
 import ImageProduct from "../../../../assets/images/illustration2.png";
 import { StyledParagraph, StyledTitle } from "../../../../styles/typography";
-import { StyledButton } from "../../../../styles/components/button";
 import { HiArrowRight } from "react-icons/hi";
 import * as C from "./styles";
+import Button from "../../../../shared/Button";
+import { Link } from "react-router-dom";
 
 const ProductOne: React.FC = () => {
   return (
@@ -21,10 +22,12 @@ const ProductOne: React.FC = () => {
               magna vulputate pellentesque a diam tincidunt. Aenean malesuada
               tellus tellus faucibus mauris quisque mauris in.
             </StyledParagraph>
-            <StyledButton href="#" buttonSize="md" buttonStyle="solid">
-              Start now
-              <HiArrowRight size={20} />
-            </StyledButton>
+            <Link to="/">
+              <Button buttonSize="md" buttonStyle="solid">
+                Start now
+                <HiArrowRight size={20} />
+              </Button>
+            </Link>
           </C.LeftSide>
           <C.RightSide>
             <img src={ImageProduct} alt="Illustration" />

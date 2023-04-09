@@ -4,8 +4,8 @@ interface iTitleProps {
   children: React.ReactNode;
   className?: string;
   tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-  fontWeight: 400 | 600 | 700;
-  fontSize: "lg" | "md" | "sm" | "ls";
+  fontWeight: 400 | 500 | 600 | 700;
+  fontSize: "xl" | "lg" | "md" | "sm" | "ls";
 }
 
 const Title = ({ children, className, tag }: iTitleProps) => {

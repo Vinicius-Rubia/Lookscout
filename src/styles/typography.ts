@@ -7,9 +7,14 @@ export const StyledTitle = styled(Title)`
 
   ${({ fontSize }) => {
     switch (fontSize) {
-      case "lg":
+      case "xl":
         return css`
           font-size: 52px;
+        `;
+
+      case "lg":
+        return css`
+          font-size: 36px;
         `;
       case "md":
         return css`

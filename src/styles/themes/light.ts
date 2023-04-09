@@ -26,5 +26,6 @@ export default {
     "white/primary600": "#FFF",
     "primary200/neutral800": "#B1CCFB",
     "primary600/neutral200": "#437EF7",
+    "neutral100/neutral700": "#F8F9FB",
   },
 };

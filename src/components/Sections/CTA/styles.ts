@@ -87,7 +87,8 @@ export const Form = styled.form`
       display: grid;
       gap: 1.6rem;
 
-      input, button {
+      input,
+      button {
         border-radius: 6px;
       }
     }
@@ -135,7 +136,7 @@ export const InputError = styled.div`
   color: ${({ theme }) => theme.colors.white};
   margin-top: 0.5rem;
   font-size: 1.2rem;
-  
+
   @media (min-width: 660px) {
     &.error-mobile {
       display: none;
@@ -145,7 +146,7 @@ export const InputError = styled.div`
       display: block;
     }
   }
-  
+
   @media (max-width: 660px) {
     &.error-mobile {
       display: block;

@@ -2,9 +2,8 @@ import React from "react";
 import { StyledParagraph, StyledTitle } from "../../../styles/typography";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useDispatch } from "react-redux";
-
-import * as C from "./styles";
 import { showAlert } from "../../../redux/alertSlice";
+import * as C from "./styles";
 
 type Inputs = {
   email: string;

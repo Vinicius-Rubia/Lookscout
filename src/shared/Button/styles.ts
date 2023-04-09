@@ -5,12 +5,13 @@ interface iStyledButtonProps {
   buttonStyle?: "solid" | "outline";
 }
 
-export const StyledButton = styled.a<iStyledButtonProps>`
+export const StyledButton = styled.button<iStyledButtonProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
   background: none;
+  cursor: pointer;
 
   font-size: 1.5rem;
   font-weight: 600;

@@ -3,12 +3,12 @@ import { HiOutlineMenu } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import { shade } from "polished";
 import { ThemeContext } from "styled-components";
-import { StyledButton } from "../../styles/components/button";
 import Switch from "react-switch";
 import LogoDark from "../../assets/images/logo-dark.svg";
 import LogoLight from "../../assets/images/logo-light.svg";
-
+import { Link } from "react-router-dom";
 import * as C from "./styles";
+import Button from "../../shared/Button";
 
 interface Props {
   toogleTheme(): void;
@@ -31,9 +31,9 @@ const Header: React.FC<Props> = ({ toogleTheme }) => {
   return (
     <C.Container>
       <C.Content>
-        <a href="#">
-          <img src={title == "dark" ? LogoLight: LogoDark} alt="Lookscout" />
-        </a>
+        <Link to="/">
+          <img src={title == "dark" ? LogoLight : LogoDark} alt="Lookscout" />
+        </Link>
         <C.MenuMobile>
           {menu ? (
             <IoMdClose onClick={handleToogleMenu} fontSize={24} />
@@ -46,27 +46,27 @@ const Header: React.FC<Props> = ({ toogleTheme }) => {
             <C.NavContent>
               <ul>
                 <li>
-                  <a href="#">Home</a>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <a href="#">Our Products</a>
+                  <Link to="/our-procucts">Our Products</Link>
                 </li>
                 <li>
-                  <a href="#">Resources</a>
+                  <Link to="/resources">Resources</Link>
                 </li>
                 <li>
-                  <a href="#">Contacts</a>
+                  <Link to="/contact">Contacts</Link>
                 </li>
               </ul>
             </C.NavContent>
           </C.Nav>
           <C.Login>
-            <StyledButton href="#" buttonSize="md">
-              Sign Up
-            </StyledButton>
-            <StyledButton href="#" buttonSize="md" buttonStyle="solid">
-              Log In
-            </StyledButton>
+            <Link to="/signup">
+              <Button buttonSize="md">Sign Up</Button>
+            </Link>
+            <Link to="/signin">
+              <Button buttonSize="md" buttonStyle="solid">Log In</Button>
+            </Link>
           </C.Login>
         </C.Navigation>
         <Switch

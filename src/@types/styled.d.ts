@@ -29,6 +29,7 @@ declare module "styled-components" {
       "white/primary600": string;
       "primary200/neutral800": string;
       "primary600/neutral200": string;
+      "neutral100/neutral700": string;
     };
   }
 }

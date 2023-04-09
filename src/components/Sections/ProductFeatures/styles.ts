@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background: ${({ theme }) => theme.colors["neutral100/gray950"]};
-  
+
   img {
-    width: 100%;    
+    width: 100%;
   }
 
   & > div {

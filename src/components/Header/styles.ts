@@ -125,6 +125,7 @@ export const Login = styled.div`
 
   a:first-child {
     border: 2px solid transparent;
+    border-radius: 6px;
 
     &:hover {
       border: 2px solid ${({ theme }) => theme.colors.primary600};
