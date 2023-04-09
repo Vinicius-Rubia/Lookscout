@@ -32,6 +32,10 @@ export const Content = styled.div`
     & > a:last-child {
       margin: 2.4rem auto;
       width: 100%;
+
+      button {
+        width: 100%;
+      }
     }
 
     h2 {

@@ -51,5 +51,12 @@ export const Buttons = styled.div`
 
   @media (max-width: 450px) {
     flex-direction: column;
+    align-items: center;
+    a {
+      width: 100%; 
+      button {
+        width: 100%;
+      }
+    }
   }
 `;
