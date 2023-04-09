@@ -5,6 +5,7 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: ${({ theme }) => theme.colors['white/gray950']};
+  overflow: hidden;
 
   @media (max-width: 440px) {
     grid-template-columns: 1fr 0;
