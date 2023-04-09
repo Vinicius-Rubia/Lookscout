@@ -13,6 +13,7 @@ export const Grid = styled.div`
 `;
 
 export const LeftSide = styled.div`
+  padding-top: 8.6rem;
   width: 42.5rem;
   margin: auto;
 

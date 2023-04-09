@@ -21,6 +21,7 @@ export const LeftSide = styled.div`
 `;
 
 export const RightSide = styled.div`
+  padding-top: 8.6rem;
   width: 42.5rem;
   margin: auto;
 

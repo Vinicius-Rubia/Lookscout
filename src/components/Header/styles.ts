@@ -5,6 +5,8 @@ interface MenuProps {
 }
 
 export const Container = styled.header`
+  position: absolute;
+  inset: 0 0 auto 0;
   background: ${({ theme }) => theme.colors["neutral100/gray950"]};
   display: flex;
   justify-content: space-between;
